@@ -1,0 +1,6 @@
+premier:
+    resource: "@PremierBundle/Resources/config/routing.yml"
+    prefix:   /premier
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
