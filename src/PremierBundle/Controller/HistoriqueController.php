@@ -16,5 +16,8 @@ class HistoriqueController extends Controller
         ));
     }
 
+    public function HistoriqueFilter(){
+
+    }
 
 }
