@@ -1,0 +1,186 @@
+/* Table of Contents
+
+==================================================
+
+
+
+    #Mobile - 240px
+
+    #Mobile - 320px	
+
+    #Mobile - 480px	
+
+	#Tablet - 768px	
+
+	*/
+
+
+
+
+
+/* #Mobile - 240px
+
+================================================== */
+
+
+
+@media only screen and (max-width: 319px) {}
+
+
+
+	
+
+/*  #Mobile - 320px
+
+================================================== */
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {}
+
+
+
+
+
+/* #Mobile - 480px
+
+================================================== */
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	
+}
+
+
+
+
+
+
+
+/* #Tablet - 768px
+
+================================================== */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastheadpage {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  .mastfootpage {
+    position: relative;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  .site-wrapper-inner-page{padding-top:70px;}
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container,
+  .masthead .inner,
+  .mastfoot .inner {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.masthead-brand {float: left;}
+  	.masthead-nav {float: right;}	
+	#logo{max-width:350px;}
+	#main-content table{max-width:335px}
+	#stats_container {max-width: 370px;}
+	#widgets div{max-width:230px;}
+	.link-title{font-size: 16px;}
+	#top_bar #user_bar {max-width: 600px;margin: 0 auto;font-size: 14px;}
+	.home #user_id{max-width:320px; font-size:18px;}
+	
+	
+	
+}
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+	#main-content{margin-top:70px;}
+	.full_form div.left{max-width:270px;}
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	#top_bg{background:none;z-index:-9999;}
+	.sep{display: none;}	
+	#form_login{clear:both;float: none; margin: 0 auto;}
+	#logo{margin: 0 auto 40px auto; float:none;}
+	#form_login input{max-width: 280px;}
+	#forgot_pwd,
+	#form_login input[type="submit"]{margin-right:0;}		
+	
+	.home #main-content table,
+	.home #main-content #stats_container{max-width: 275px;}
+  	#widgets div{float:left;}
+	#user_id,
+	.section-title,
+	.link-title{font-size: 14px;}
+	#user_bar div {border-right: 0;padding-right: 10px;margin-right: 0;font-size: 12px;}
+	#top_bar #user_bar {clear: both;}
+	.step-title {line-height: 14px;font-size: 14px;}
+	.respleft{float:left;}
+	#payement_icon{clear: both;}
+	.icon-list a {padding: 0.5em 0em !important;margin: 40px 5px 0 5px !important;font-size: 1.4em !important;}
+	.icon-list a span {display: none !important;}
+	.menu-button, .menu-wrap{right:2em !important;}
+	#main-content form input[type="text"], #main-content form input[type="password"], #main-content form input[type="tel"], #main-content form input[type="email"], #main-content form select{max-width:200px;width:100%;font-size:13px;}
+	#main-content form input[type="submit"], .file-upload-button{font-size:12px;}
+	.mid_width {max-width: 400px;width: 100% !important;}
+	
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+	.home #main-content table{max-width: 229px;}}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    max-width: 1150px;
+	margin:0 auto;
+  }
+  .masthead .inner,
+  .mastfoot .inner{max-width: 1150px;margin:0 auto;}
+  .mastfoot .inner img{margin-top:-45px}
+  .sep{display: block;}
+  
+  
+}
+
+@media only screen and (min-width: 1024px) {}
+
+
+
+
+
+
+@media only screen and (max-width: 1023px) {}
+
+
+
+@media only screen and (max-width: 1279px) {}
+
+
+
+@media only screen and (min-width: 1280px) {}

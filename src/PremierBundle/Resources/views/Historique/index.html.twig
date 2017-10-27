@@ -1,1 +1,33 @@
-Hello World!
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+
+    <table   class="full_width">
+
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>identifiant</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for achat in entities %}
+            <tr>
+                <td>{{ achat.identifiant.id}}</td>
+                <td>{{ achat.identifiant.fname }}</td>
+
+
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
+   {% block js %}
+
+   {% endblock %}

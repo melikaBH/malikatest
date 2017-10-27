@@ -1,0 +1,19 @@
+list_achat:
+    path: /historique
+    defaults: { _controller: PremierBundle:Historique:index}
+
+list_identifiant:
+    path: /identifiants
+    defaults: {_controller: PremierBundle:Identifiant:index}
+add_identifiant:
+    path: /ajouter_identifiant
+    defaults: { _controller: PremierBundle:Identifiant:new}
+
+modify_identifiant:
+    path: /modify/{id}
+    defaults: {_controller: PremierBundle:Identifiant:edit}
+delete_identifiant:
+    path: /supprimer/{id}
+    defaults: {_controller: PremierBundle:Identifiant:delete}
+
+

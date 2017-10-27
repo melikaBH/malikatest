@@ -1,3 +1,19 @@
+premier_sous_produit:
+    resource: "@PremierBundle/Controller/SousProduitController.php"
+    type:     annotation
+
+premier_produit:
+    resource: "@PremierBundle/Controller/ProduitController.php"
+    type:     annotation
+
+premier_achat:
+    resource: "@PremierBundle/Controller/AchatController.php"
+    type:     annotation
+
+premier_identifiant:
+    resource: "@PremierBundle/Controller/IdentifiantController.php"
+    type:     annotation
+
 premier:
     resource: "@PremierBundle/Resources/config/routing.yml"
     prefix:   /premier

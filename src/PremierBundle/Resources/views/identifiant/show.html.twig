@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Identifiant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ identifiant.id }}</td>
+            </tr>
+            <tr>
+                <th>Fname</th>
+                <td>{{ identifiant.fName }}</td>
+            </tr>
+            <tr>
+                <th>Lname</th>
+                <td>{{ identifiant.lName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('identifiant_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('identifiant_edit', { 'id': identifiant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

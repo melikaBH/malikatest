@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+    <h1>Identifiants list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for identifiant in identifiants %}
+            <tr>
+                <td>{{ identifiant.id }}</td>
+                <td>{{ identifiant.fName }}</td>
+                <td>{{ identifiant.lName }}</td>
+                <td>
+                    <ul>
+
+                        <li>
+                            <a href="{{ path('modify_identifiant', { 'id': identifiant.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('add_identifiant') }}">Create a new identifiant</a>
+        </li>
+    </ul>
+{% endblock %}

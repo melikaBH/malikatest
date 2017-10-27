@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sousproduits list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Prix</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sousProduit in sousProduits %}
+            <tr>
+                <td><a href="{{ path('sousproduit_show', { 'id': sousProduit.id }) }}">{{ sousProduit.id }}</a></td>
+                <td>{{ sousProduit.titre }}</td>
+                <td>{{ sousProduit.prix }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sousproduit_show', { 'id': sousProduit.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('sousproduit_edit', { 'id': sousProduit.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sousproduit_new') }}">Create a new sousProduit</a>
+        </li>
+    </ul>
+{% endblock %}

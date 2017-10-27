@@ -38,6 +38,13 @@ class Achat
     private $sousproduits;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", length=255)
+     */
+    private $status;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -89,5 +96,22 @@ class Achat
     {
         $this->identifiant = $identifiant;
     }
+
+    /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
 
 }
