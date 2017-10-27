@@ -35,6 +35,11 @@ class SousProduit
      */
     private $prix;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Produit", inversedBy="sousproducts")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
+     */
+    private $produit;
 
     /**
      * Get id
@@ -91,4 +96,21 @@ class SousProduit
     {
         return $this->prix;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * @param mixed $produit
+     */
+    public function setProduit($produit)
+    {
+        $this->produit = $produit;
+    }
+
 }

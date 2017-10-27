@@ -28,6 +28,10 @@ class Produit
      */
     private $titre;
 
+    /**
+     * @ORM\OneToMany(targetEntity="SousProduit", mappedBy="Produit")
+     */
+    private $sousproducts;
 
     /**
      * Get id
@@ -61,4 +65,21 @@ class Produit
     {
         return $this->titre;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSousproducts()
+    {
+        return $this->sousproducts;
+    }
+
+    /**
+     * @param mixed $sousproducts
+     */
+    public function setSousproducts($sousproducts)
+    {
+        $this->sousproducts = $sousproducts;
+    }
+
 }
