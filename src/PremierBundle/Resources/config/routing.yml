@@ -15,5 +15,34 @@ modify_identifiant:
 delete_identifiant:
     path: /supprimer/{id}
     defaults: {_controller: PremierBundle:Identifiant:delete}
+list_achats:
+    path: /liste_achat
+    defaults: {_controller: PremierBundle:Achat:index}
 
+list_produit:
+    path: /produits
+    defaults: {_controller: PremierBundle:Produit:index}
+add_product:
+    path: /ajouter_produit
+    defaults: { _controller: PremierBundle:Produit:new}
 
+modify_produit:
+    path: /modify/{id}
+    defaults: {_controller: PremierBundle:Produit:edit}
+delete_product:
+    path: /supprimer/{id}
+    defaults: {_controller: PremierBundle:Produit:delete}
+
+list_sous_produit:
+    path: /sous_produits
+    defaults: {_controller: PremierBundle:SousProduit:index}
+ajouter_sous_produit:
+    path: /ajouter_sous_produit
+    defaults: { _controller: PremierBundle:SousProduit:new}
+
+modify_sous_produit:
+    path: /modify/{id}
+    defaults: {_controller: PremierBundle:SousProduit:edit}
+delete_sous_product:
+    path: /supprimer/{id}
+    defaults: {_controller: PremierBundle:SousProduit:delete}

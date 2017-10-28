@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block content %}
     <h1>Sousproduits list</h1>
 
     <table>
@@ -15,16 +15,14 @@
         <tbody>
         {% for sousProduit in sousProduits %}
             <tr>
-                <td><a href="{{ path('sousproduit_show', { 'id': sousProduit.id }) }}">{{ sousProduit.id }}</a></td>
+                <td>{{ sousProduit.id }}</td>
                 <td>{{ sousProduit.titre }}</td>
                 <td>{{ sousProduit.prix }}</td>
                 <td>
                     <ul>
+
                         <li>
-                            <a href="{{ path('sousproduit_show', { 'id': sousProduit.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('sousproduit_edit', { 'id': sousProduit.id }) }}">edit</a>
+                            <a href="{{ path('modify_sous_produit', { 'id': sousProduit.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -35,7 +33,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('sousproduit_new') }}">Create a new sousProduit</a>
+            <a href="{{ path('ajouter_sous_produit') }}">Create a new sousProduit</a>
         </li>
     </ul>
 {% endblock %}

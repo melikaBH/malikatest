@@ -7,36 +7,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 
-/**
- * Sousproduit controller.
- *
- * @Route("sousproduit")
- */
+
 class SousProduitController extends Controller
 {
-    /**
-     * Lists all sousProduit entities.
-     *
-     * @Route("/", name="sousproduit_index")
-     * @Method("GET")
-     */
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         $sousProduits = $em->getRepository('PremierBundle:SousProduit')->findAll();
 
-        return $this->render('sousproduit/index.html.twig', array(
+        return $this->render('@Premier/sousproduit/index.html.twig', array(
             'sousProduits' => $sousProduits,
         ));
     }
 
-    /**
-     * Creates a new sousProduit entity.
-     *
-     * @Route("/new", name="sousproduit_new")
-     * @Method({"GET", "POST"})
-     */
+
     public function newAction(Request $request)
     {
         $sousProduit = new Sousproduit();
@@ -48,21 +34,16 @@ class SousProduitController extends Controller
             $em->persist($sousProduit);
             $em->flush();
 
-            return $this->redirectToRoute('sousproduit_show', array('id' => $sousProduit->getId()));
+            return $this->redirectToRoute('ajouter_sous_produit', array('id' => $sousProduit->getId()));
         }
 
-        return $this->render('sousproduit/new.html.twig', array(
+        return $this->render('@Premier/sousproduit/new.html.twig', array(
             'sousProduit' => $sousProduit,
             'form' => $form->createView(),
         ));
     }
 
-    /**
-     * Finds and displays a sousProduit entity.
-     *
-     * @Route("/{id}", name="sousproduit_show")
-     * @Method("GET")
-     */
+
     public function showAction(SousProduit $sousProduit)
     {
         $deleteForm = $this->createDeleteForm($sousProduit);
@@ -73,12 +54,7 @@ class SousProduitController extends Controller
         ));
     }
 
-    /**
-     * Displays a form to edit an existing sousProduit entity.
-     *
-     * @Route("/{id}/edit", name="sousproduit_edit")
-     * @Method({"GET", "POST"})
-     */
+
     public function editAction(Request $request, SousProduit $sousProduit)
     {
         $deleteForm = $this->createDeleteForm($sousProduit);
@@ -98,12 +74,7 @@ class SousProduitController extends Controller
         ));
     }
 
-    /**
-     * Deletes a sousProduit entity.
-     *
-     * @Route("/{id}", name="sousproduit_delete")
-     * @Method("DELETE")
-     */
+
     public function deleteAction(Request $request, SousProduit $sousProduit)
     {
         $form = $this->createDeleteForm($sousProduit);
@@ -118,13 +89,7 @@ class SousProduitController extends Controller
         return $this->redirectToRoute('sousproduit_index');
     }
 
-    /**
-     * Creates a form to delete a sousProduit entity.
-     *
-     * @param SousProduit $sousProduit The sousProduit entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
+
     private function createDeleteForm(SousProduit $sousProduit)
     {
         return $this->createFormBuilder()
